@@ -57,7 +57,7 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 711px 399px;
+  grid-template-columns: auto auto;
   grid-template-areas: "result content__details";
   align-items: end;
   gap: 30px;
@@ -83,7 +83,7 @@ ol {
 
 .content__list-container {
   position: relative; /*для прелоадера*/
-  height: 298px;
+  max-height: 298px;
   margin-top: 26px;
   padding: 1px 3px 0 2px;
   overflow-x: hidden;
@@ -152,7 +152,6 @@ ol {
 
 .content__card-link {
   display: block;
-  max-width: 390px;
   color: #fff;
   text-decoration: none;
 }
