@@ -9,13 +9,16 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -47,24 +50,18 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 /**********************Шаг 1***************************/
-.page {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
 
 .content {
-  min-width: 1140px;
   display: grid;
   grid-template-columns: 711px 399px;
-  grid-template-areas:
-  "result content__details";
-  gap: 30px;
+  grid-template-areas: "result content__details";
   align-items: end;
+  gap: 30px;
+  min-width: 1140px;
 }
 
 .result {
@@ -72,33 +69,33 @@ ol {
 }
 
 .content__details {
-  height: 100%;
-  width: 100%;
   grid-area: content__details;
+  width: 100%;
+  height: 100%;
 }
 
 .search-form {
   display: flex;
-  gap: 40px;
   justify-content: space-between;
   align-items: start;
+  gap: 40px;
 }
 
 .content__list-container {
+  position: relative; /*для прелоадера*/
   height: 298px;
-  overflow-y: auto;
-  overflow-x: hidden;
   margin-top: 26px;
   padding: 1px 3px 0 2px;
-  position: relative; /*для прелоадера*/
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /***********************Шаг 2**********************************/
 .result__video-container {
+  position: relative; /*для прелоадера*/
   min-width: 711px;
   height: 386px;
   margin-bottom: 16px;
-  position: relative; /*для прелоадера*/
 }
 
 .result__video {
@@ -123,7 +120,7 @@ ol {
   min-width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: center;  
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -133,20 +130,20 @@ ol {
 
 /***********************Шаг 3**********************************/
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400; 
-  line-height: 22px;
   margin-bottom: 5px;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .title {
+  display: block;
   font-family: Oswald, sans-serif;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
   line-height: 70px;
   text-transform: uppercase;
-  display: block;
 }
 
 .content__accent {
@@ -154,44 +151,45 @@ ol {
 }
 
 .content__card-link {
+  display: block;
+  max-width: 390px;
+  color: #fff;
   text-decoration: none;
-  color:#fff;
 }
 
 .content__video-card-title {
+  margin-bottom: 6px;
+  overflow: hidden;
   font-family: Oswald, sans-serif;
-  font-size: 30px;
   font-weight: 700;
+  font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 6px;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 0.9;
   display: -webkit-box;
+  overflow: hidden;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 0.9;
+  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 /***********************Шаг 4**********************************/
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
-} 
+}
 
 .search-form__checkbox-list {
   display: flex;
@@ -209,19 +207,19 @@ ol {
 }
 
 .search-form__textfield {
-  appearance: none;
-  background-color: transparent;
   min-width: 225px;
   height: 27px;
-  padding: 0;
   border-width: 1px 0px 1px 0px;
   border-style: solid;
-  border-color: #FFF;
+  border-color: #fff;
+  padding: 0;
   color: #fff;
   font-family: Fira Sans Condensed;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 1.2;
+  background-color: transparent;
+  appearance: none;
 }
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 70%);
@@ -241,25 +239,25 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
   background-color: transparent;
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  align-self: center;
 }
 
 .search-form__pseudo-checkbox::after {
-  display: none;
   content: "";
-  background-color: #fff;
+  display: none;
   width: 15px;
   height: 15px;
+  background-color: #fff;
 }
 
-.search-form__checkbox:checked~.search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
   display: block;
 }
 
@@ -269,13 +267,13 @@ ol {
 }
 /***********************Шаг 5**************************/
 .button {
-  background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
   font-family: Fira Sans Condensed;
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 1.2;
+  background-color: transparent;
 }
 
 .search-form__submit-button {
@@ -291,8 +289,8 @@ ol {
 }
 
 .button:hover {
-  cursor: pointer;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .button:active {
@@ -309,17 +307,14 @@ ol {
 }
 
 /***********************Шаг 6**************************/
-.content__card-link {
-  display: block;
-}
-
-.content__card-link_current, .content__card-link:active  {
+.content__card-link_current,
+.content__card-link:active {
   background: #545050;
 }
 
 .content__card-link:hover {
-  cursor: pointer;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .content__card-link:focus {
@@ -328,5 +323,5 @@ ol {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 0;
 }
