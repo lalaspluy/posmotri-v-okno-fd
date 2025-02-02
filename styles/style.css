@@ -62,7 +62,6 @@ ol {
   align-items: end;
   gap: 30px;
   min-width: 1140px;
-  min-height: 534px; /*чтобы при отсутсвии видео не опускался заголовок в правом блоке*/
 }
 
 .result {
@@ -84,7 +83,7 @@ ol {
 
 .content__list-container {
   position: relative; /*для прелоадера*/
-  max-height: 298px;
+  height: 298px;
   margin-top: 26px;
   padding: 1px 3px 0 2px;
   overflow-y: auto;
